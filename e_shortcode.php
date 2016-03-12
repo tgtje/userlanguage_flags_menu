@@ -75,7 +75,8 @@ class userlanguage_flags_menu_shortcodes  extends e_shortcode
     } 
     return $text;    
   }
-  
+
+  /* TODO set template name [version01] as parameter - when somebody will need this */
 	function sc_ulflags($parm='')
 	{
    $parms 		= eHelper::scParams($parm); 
