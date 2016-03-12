@@ -1,3 +1,9 @@
+12.03.2016 Version 2.1.1 
+- added shortcodes and templates system
+- this is primary intended for theme developers. Copying template to theme and override it with needed markup plus to have all needed code without need to overrride shortcodes
+- original functionality with menu configuration remained without any change
+- removed zip file with images, not understand the reason for this
+
 12.03.2016 Version 2.0.0 
 - updated this plugin for version 2
 - no new functionality
