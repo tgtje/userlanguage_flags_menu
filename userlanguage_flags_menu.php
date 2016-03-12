@@ -8,20 +8,24 @@
 |        Author      JmoRava, Oxigen ( www.e107.funsite.cz ) 
 +----------------------------------------------------------------------------------------------------+
 */
-if (!defined('e107_INIT')) { exit; }
-unset($text);
-global $pref;
-$indexArray = array('lanflags_title_on','lanflags_typ','lanflags_size','lanflags_aling');    
-foreach($indexArray as $ind)
+
+
+if(!defined('e107_INIT'))
 {
-	if(!isset($pref[$ind]))
-	{
-		$pref[$ind]='';
-	}
+	exit;
 }
-if ( ! defined('e107_INIT')) { exit(); }
-require_once(e_HANDLER.'language_class.php');
-$slng = new language;
+ 
+if(!e107::isInstalled('userlanguage_flags_menu'))
+{
+	e107::redirect(e_BASE . 'index.php');
+}
+
+$pref = e107::pref('userlanguage_flags_menu'); 
+
+unset($text);
+
+$slng = e107::getLanguage();
+
 $languageList = explode(',', e_LANLIST);
 sort($languageList);
 if(!$pref['user_lan_use']){
