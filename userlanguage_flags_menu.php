@@ -48,7 +48,10 @@ if(!$pref['user_lan_use']){
 	}else{
 		foreach($lanlist as $langval)
 		{
-		$text .= "<form method='post' action='".$action."' style='display:inline;' class='lan_flag'><p style='display:inline;'><input type='hidden' name='setlanguage' value='".USLFM_P_5."' /><input type='hidden' name='sitelanguage' value='".$langval."' /><input type='image' style='display:inline' src='".e_PLUGIN."userlanguage_flags_menu/flags/".$pref['lanflags_typ']."/".$langval.".png' alt='".$langval."' title='".$langval."' width='".$pref['lanflags_size']."' /> </p></form>\n";
+		$text .= "<form method='post' action='".$action."' style='display:inline;' class='lan_flag'>
+    <p style='display:inline;'><input type='hidden' name='setlanguage' value='".USLFM_P_5."' />
+    <input type='hidden' name='sitelanguage' value='".$langval."' />
+    <input type='image' style='display:inline' src='".e_PLUGIN_ABS."userlanguage_flags_menu/flags/".$pref['lanflags_typ']."/".$langval.".png' alt='".$langval."' title='".$langval."' width='".$pref['lanflags_size']."' /> </p></form>\n";
 		}
 	}
 	$text .= "</div>";
