@@ -1,6 +1,9 @@
 # Userlanguage Flags Menu
 
-12.03.2016 Version 2.1.1  (testing)
+21.03.2016 Version 2.1.2 
+- added template parameter for main shortcode
+
+12.03.2016 Version 2.1.1   
 - added shortcodes and templates system
 - this is primary intended for theme developers. Copying template to theme and override it with needed markup plus to have all needed code without need to overrride shortcodes
 - original functionality with menu configuration from 2.0.0 remained without any change

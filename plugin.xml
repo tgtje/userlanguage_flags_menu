@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e107Plugin name="Userlanguage Flags Menu" lan="USLFM_P_1" version="1.0" date="2016-03-12" compatibility="2.0" installRequired="true" >
-	<author name="JmoRava" url="http://www.e107.funsite.cz/" />
+<e107Plugin name="Userlanguage Flags Menu" lan="USLFM_P_1" version="2.1.2" date="2016-03-21" compatibility="2.0" installRequired="true" >
+	<author name="JmoRava / Jimako" url="https://github.com/Jimmi08/userlanguage_flags_menu" />
 	<summary lan="">This menu selection allows users to choose the language translation.</summary>
 	<description lan="">This menu selection allows users to choose the language translation.</description>
 	<keywords>

@@ -80,13 +80,14 @@ class userlanguage_flags_menu_shortcodes  extends e_shortcode
 	function sc_ulflags($parm='')
 	{
    $parms 		= eHelper::scParams($parm); 
+   $template 		  = varset($parms['template'],'version01');
    $slng = new language;
    $languageList = explode(',', e_LANLIST);
    sort($languageList);
    $sc = e107::getScBatch('userlanguage_flags_menu');    
-   $text1   = e107::getParser()->parseTemplate($this->plugTemplates['version01']['start'], false, $sc);
-   $text2   = e107::getParser()->parseTemplate($this->plugTemplates['version01']['body'], false, $sc);
-   $text3   = e107::getParser()->parseTemplate($this->plugTemplates['version01']['end'], false, $sc); 
+   $text1   = e107::getParser()->parseTemplate($this->plugTemplates[$template ]['start'], false, $sc);
+   $text2   = e107::getParser()->parseTemplate($this->plugTemplates[$template ]['body'], false, $sc);
+   $text3   = e107::getParser()->parseTemplate($this->plugTemplates[$template ]['end'], false, $sc); 
    return $text1.$text2.$text3;
   }
 
