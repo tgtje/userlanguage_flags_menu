@@ -61,7 +61,9 @@ class userlanguage_flags_menu_shortcodes  extends e_shortcode
     
     require_once(e_HANDLER."file_class.php");
     $fl = new e_file;
-    $lanlist = $fl->get_dirs(e_LANGUAGEDIR);
+
+    $lanlist = (e107::getPref()['multilanguage']>0?$fl->get_dirs(e_LANGUAGEDIR):array());
+//-->    $lanlist = $fl->get_dirs(e_LANGUAGEDIR);
     sort($lanlist);  
     foreach($lanlist as $langval)
     {
@@ -79,9 +81,11 @@ class userlanguage_flags_menu_shortcodes  extends e_shortcode
   /* TODO set template name [version01] as parameter - when somebody will need this */
 	function sc_ulflags($parm='')
 	{
+
    $parms 		= eHelper::scParams($parm); 
    $template 		  = varset($parms['template'],'version01');
-   $slng = new language;
+//Why this var???   $slng = new language;
+
    $languageList = explode(',', e_LANLIST);
    sort($languageList);
    $sc = e107::getScBatch('userlanguage_flags_menu');    
@@ -95,7 +99,7 @@ class userlanguage_flags_menu_shortcodes  extends e_shortcode
 	{
 		$pref = e107::pref('userlanguage_flags_menu');		
  	  
-    $slng = new language;
+//Why this var???    $slng = new language;
     $languageList = explode(',', e_LANLIST);
     sort($languageList);
     if($pref['lanflags_title'] ==''){
