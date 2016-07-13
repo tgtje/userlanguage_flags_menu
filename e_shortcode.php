@@ -60,9 +60,10 @@ class userlanguage_flags_menu_shortcodes  extends e_shortcode
     $flagtype 	= vartrue($parms['flagtype']) ? $parms['flagtype'] : $this->plugPrefs['lanflags_typ'];
     
     require_once(e_HANDLER."file_class.php");
-    $fl = new e_file;
-
-    $lanlist = (e107::getPref()['multilanguage']>0?$fl->get_dirs(e_LANGUAGEDIR):array());
+    $fl = new e_file;   
+            
+    $languageList = explode(',', e_LANLIST);
+    $lanlist = (e107::getPref()['multilanguage']>0?$languageList:array());
 //-->    $lanlist = $fl->get_dirs(e_LANGUAGEDIR);
     sort($lanlist);  
     foreach($lanlist as $langval)
