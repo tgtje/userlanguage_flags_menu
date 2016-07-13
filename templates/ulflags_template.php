@@ -1,11 +1,11 @@
 <?php
 //<li><a href="#"><img src="http://preview.byaviators.com/template/realsite/assets/img/flags/fr.png" alt="French"> French</a></li>
 
-$ULFLAGS_TEMPLATE['version01']['start'] = "<ul class='header-topbar-links'>";; 
-$ULFLAGS_TEMPLATE['version01']['body'] = '{ULF_LANGITEM:flagsize=16&flagtype=2}';
-$ULFLAGS_TEMPLATE['version01']['end'] = '</ul>';
+$ULFLAGS_TEMPLATE['default']['start'] = '<ul class="header-topbar-links">';; 
+$ULFLAGS_TEMPLATE['default']['body'] = '{ULF_LANGITEM:flagsize=16&flagtype=2}';
+$ULFLAGS_TEMPLATE['default']['end'] = '</ul>';
          
-$ULFLAGS_TEMPLATE['version01']['item'] = "
+$ULFLAGS_TEMPLATE['default']['item'] = "
 <li> 
 <form method='post' action='{ULF_ACTION}' style='display:inline;'>
   <p style='display:inline;'><input type='hidden' name='setlanguage' value='".USLFM_P_5."' />

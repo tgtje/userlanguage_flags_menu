@@ -73,18 +73,18 @@ class userlanguage_flags_menu_shortcodes  extends e_shortcode
       'flagsize' => $flagsize,
       'flagtype' => $flagtype,      
       ));      
-    $text   .= e107::getParser()->parseTemplate($this->plugTemplates['version01']['item'], false, $sc);
+    $text   .= e107::getParser()->parseTemplate($this->plugTemplates['default']['item'], false, $sc);
     
     } 
     return $text;    
   }
 
-  /* TODO set template name [version01] as parameter - when somebody will need this */
+  /* TODO set template name [default] as parameter - when somebody will need this */
 	function sc_ulflags($parm='')
 	{
 
    $parms 		= eHelper::scParams($parm); 
-   $template 		  = varset($parms['template'],'version01');
+   $template 		  = varset($parms['template'],'default');
 //Why this var???   $slng = new language;
 
    $languageList = explode(',', e_LANLIST);
