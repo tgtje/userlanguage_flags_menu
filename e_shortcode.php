@@ -60,7 +60,8 @@ class userlanguage_flags_menu_shortcodes  extends e_shortcode
 		require_once(e_HANDLER."file_class.php");
 		$fl = new e_file;   
 		$languageList = explode(',', e_LANLIST);
-		$lanlist = (e107::getPref()['multilanguage']>0?$languageList:array());
+		//$lanlist = (e107::getPref()['multilanguage']>0?$languageList:array());
+		$lanlist = $fl->get_dirs(e_LANGUAGEDIR);
 		sort($lanlist);  
 		foreach($lanlist as $langval)	{
 			$sc->setVars(array(
