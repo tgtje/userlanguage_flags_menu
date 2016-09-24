@@ -42,9 +42,9 @@ define("USLFM_P_7", "A frissítés erre: ");
 define("USLFM_P_8", "sikeresen lezajlott!");
 //* HELP *//
 define("USLFM_H_1", "<b>Sugó</b>");
-define("USLFM_H_3", "<b>View menu or flags:</b><br/> This option allows you to display the graphics options (flags), or the default drop-down menu.");
-define("USLFM_H_4", "<b>Entering size flags:</b><br/> Flags are about the size of 100px. This option lets you choose the range of x-display size of 99px.");
-define("USLFM_H_5", "<b>View menu or flags:</b> <br/> This option allows you to display the graphics options (flags), or the default drop-down menu.");
-define("USLFM_H_6", "<b>Alignment flags:</b><br/> Since version 1.4 it is possible to Flag positioned in the menu.");
-define("USLFM_H_7", "<b>Integration pages:</b><br/> Menu can be used to directly integrate  using the code {ULFLAGS}.");
+define("USLFM_H_3", "<b>Menü címének mutatása vagy elrejtése:</b><br/>Az opció lehetővé teszi, hogy megjelenítse vagy elrejtse a menü nevét.");
+define("USLFM_H_4", "<b>Zászló mérete:</b><br/> A zászlók mérete körülbelül 100px. Az opció lehetővé teszi, hogy megadja a méretet. p.l.: 99px.");
+define("USLFM_H_5", "<b>Nyelv megjelenítése legördülő menüben:</b> <br/>Az opció lehetővé teszi, hogy megjelenítse a nyelvek nevét egy legördülő menüből.");
+define("USLFM_H_6", "<b>Zászlók elrendezése:</b><br/>Az 1.4-es verzióban zászlókat lehet elhelyezni a menüben.");
+define("USLFM_H_7", "<b>Oldal integráció:</b><br/>A menü közvetlenül használható a következő integráló kóddal: {ULFLAGS}.");
 ?>
