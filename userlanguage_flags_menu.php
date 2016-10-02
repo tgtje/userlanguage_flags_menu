@@ -33,8 +33,8 @@ if(!$pref['user_lan_use']){
 	$fl = new e_file;   
 	$lanlist = $fl->get_dirs(e_LANGUAGEDIR);
 	sort($lanlist);  
-	$action = (e_QUERY && !$_GET['elan']) ? e_SELF."?".e_QUERY : e_SELF;
-	$action = e_REQUEST_SELF;
+	//$action = (e_QUERY && !$_GET['elan']) ? e_SELF."?".e_QUERY : e_SELF;
+	$action = e_REQUEST_URI;
  
 	$text = "<div style='text-align:".$pref['lanflags_aling']."'>\n";
 	if($pref['lanflags_render'] == '1'){
