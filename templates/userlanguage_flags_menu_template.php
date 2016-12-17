@@ -1,5 +1,4 @@
 <?php
-//<li><a href="#"><img src="http://preview.byaviators.com/template/realsite/assets/img/flags/fr.png" alt="French"> French</a></li>
 
 $ULFLAGS_TEMPLATE['default']['start'] = '<ul class="header-topbar-links">';; 
 $ULFLAGS_TEMPLATE['default']['body'] = '{ULF_LANGITEM:flagsize=16&flagtype=2}';
@@ -17,8 +16,5 @@ $ULFLAGS_TEMPLATE['default']['item'] = "
 </form>  
 </li>
   
-";             
-
-?>
-
-                                                         
+";    
+?>                                                       
