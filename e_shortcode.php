@@ -30,7 +30,7 @@ class userlanguage_flags_menu_shortcodes  extends e_shortcode
 		parent::__construct();
 		// Get plugin preferences.
 		$this->plugPrefs = e107::getPlugConfig('userlanguage_flags_menu')->getPref();
-		$this->plugTemplates = e107::getTemplate('userlanguage_flags_menu', 'ulflags');
+		$this->plugTemplates = e107::getTemplate('userlanguage_flags_menu', 'userlanguage_flags_menu');
 	}
 
 	function sc_ulf_action($parm='') {
