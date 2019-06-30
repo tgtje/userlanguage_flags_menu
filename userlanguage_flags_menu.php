@@ -28,9 +28,14 @@ $slng = e107::getLanguage();
  
 if(!$pref['user_lan_use']){  
 	$languageList = explode(',', e_LANLIST);   
-	$lanlist = (e107::getPref()['multilanguage']>0?$languageList:array());   /* rica-carv */
+	//$lanlist = (e107::getPref()['multilanguage']>0?$languageList:array());   /* rica-carv */
+	//$lanlist = $languageList:array();      cause white screen
+	$fl = new e_file;   
+	$lanlist = $fl->get_dirs(e_LANGUAGEDIR);
 	sort($lanlist);  
-	$action = (e_QUERY && !$_GET['elan']) ? e_SELF."?".e_QUERY : e_SELF;
+	//$action = (e_QUERY && !$_GET['elan']) ? e_SELF."?".e_QUERY : e_SELF;
+	$action = e_REQUEST_URI;
+ 
 	$text = "<div style='text-align:".$pref['lanflags_aling']."'>\n";
 	if($pref['lanflags_render'] == '1'){
 			$text .= "<form method='post' action='".$action."'><div class='lan_flag'><select name='sitelanguage' class='tbox' >";

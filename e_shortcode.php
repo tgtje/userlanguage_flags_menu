@@ -60,7 +60,8 @@ class userlanguage_flags_menu_shortcodes  extends e_shortcode
 		require_once(e_HANDLER."file_class.php");
 		$fl = new e_file;   
 		$languageList = explode(',', e_LANLIST);
-		$lanlist = (e107::getPref()['multilanguage']>0?$languageList:array());
+		//$lanlist = (e107::getPref()['multilanguage']>0?$languageList:array());
+		$lanlist = $fl->get_dirs(e_LANGUAGEDIR);
 		sort($lanlist);  
 		foreach($lanlist as $langval)	{
 			$sc->setVars(array(
@@ -91,12 +92,14 @@ class userlanguage_flags_menu_shortcodes  extends e_shortcode
 	{
 		$pref = e107::pref('userlanguage_flags_menu');		
 		if($pref['lanflags_title'] ==''){
-		}
+		}    
 		if(!$pref['user_lan_use']){
 			$languageList = explode(',', e_LANLIST);   
-			$lanlist = (e107::getPref()['multilanguage']>0?$languageList:array());   /* rica-carv */
-			sort($lanlist);  
-			$action = (e_QUERY && !$_GET['elan']) ? e_SELF."?".e_QUERY : e_SELF;
+			//$lanlist = (e107::getPref()['multilanguage']>0?$languageList:array());   /* rica-carv */
+      $fl = new e_file;   
+      $lanlist = $fl->get_dirs(e_LANGUAGEDIR);
+			sort($lanlist);        
+		  $action = e_REQUEST_URI;
 			$text = "<div style='text-align:".$pref['lanflags_aling']."'>\n";
 			if($pref['lanflags_render'] == '1'){
 					$text .= "<form method='post' action='".$action."'><div class='lan_flag'><select name='sitelanguage' class='tbox' >";
