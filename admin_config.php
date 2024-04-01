@@ -120,13 +120,11 @@ class userlanguage_flags_menu_ui extends e_admin_ui
 		}
 
 		
-		// ------- Customize Create --------
-		
-		public function beforeCreate($new_data)
+		public function beforeCreate($new_data,$old_data)
 		{
 			return $new_data;
 		}
-	
+
 		public function afterCreate($new_data, $old_data, $id)
 		{
 			// do something
@@ -134,12 +132,12 @@ class userlanguage_flags_menu_ui extends e_admin_ui
 
 		public function onCreateError($new_data, $old_data)
 		{
-			// do something		
-		}		
-		
-		
+			// do something
+		}
+
+
 		// ------- Customize Update --------
-		
+
 		public function beforeUpdate($new_data, $old_data, $id)
 		{
 			return $new_data;
@@ -147,12 +145,12 @@ class userlanguage_flags_menu_ui extends e_admin_ui
 
 		public function afterUpdate($new_data, $old_data, $id)
 		{
-			// do something	
+			// do something
 		}
-		
+
 		public function onUpdateError($new_data, $old_data, $id)
 		{
-			// do something		
+			// do something
 		}		
 		
 			
@@ -187,19 +185,19 @@ class userlanguage_flags_menu_form_ui extends e_admin_form_ui
 			case 'write': // Edit Page
  			
       $text ="</div><div class='col-md-3 text-center'>
-        <img src='".e_PLUGIN_ABS."userlanguage_flags_menu/flags/0/English.png' style='border: 0px;' width='".$size."' /><br />";
+        <img src='".e_PLUGIN_ABS."userlanguage_flags_menu/flags/0/English.jpg' style='border: 0px;' width='".$size."' /><br />";
      
       $text .= $frm->radio('lanflags_typ', 0, ($curVal == 0));
       $text .="</div><div class='col-md-3 text-center'>
-        <img src='".e_PLUGIN_ABS."userlanguage_flags_menu/flags/1/English.png' style='border: 0px;' width='".$size."' /><br />";
+        <img src='".e_PLUGIN_ABS."userlanguage_flags_menu/flags/1/English.jpg' style='border: 0px;' width='".$size."' /><br />";
       
       $text .= $frm->radio('lanflags_typ', 1, ($curVal == 1));  
       $text .="</div><div class='col-md-3 text-center'>
-        <img src='".e_PLUGIN_ABS."userlanguage_flags_menu/flags/2/English.png' style='border: 0px;' width='".$size."' /><br />";
+        <img src='".e_PLUGIN_ABS."userlanguage_flags_menu/flags/2/English.jpg' style='border: 0px;' width='".$size."' /><br />";
           
       $text .= $frm->radio('lanflags_typ', 2, ($curVal == 2)); 
       $text .="</div><div class='col-md-3 text-center'>
-        <img src='".e_PLUGIN_ABS."userlanguage_flags_menu/flags/3/English.png' style='border: 0px;' width='".$size."' /><br />";
+        <img src='".e_PLUGIN_ABS."userlanguage_flags_menu/flags/3/English.jpg' style='border: 0px;' width='".$size."' /><br />";
       $text .= $frm->radio('lanflags_typ', 3, ($curVal == 3));
       $text .= '</div>';          
       return $text;  	
