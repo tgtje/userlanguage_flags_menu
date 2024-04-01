@@ -1,5 +1,7 @@
 # Userlanguage Flags Menu
 
+01-04-2024  Rework on admin config  php 8.1/ git 2.4.0 X (febr/march 2024)
+
 21.03.2016 Version 2.1.2 
 - added template parameter for main shortcode
 
@@ -16,6 +18,5 @@
 12.03.2016 Upload version 1.5 as backup
 Userlanguage Menu v1.5 improved language selection by using flags and let admin to set menu's look configuration via admin area
 
-01-04-2024  Rework on admin config, still needs finetuning for displaying icons in admin config in system.. else works  php 8.1/ git 2.4.0 X (febr/march 2024)
 
 
